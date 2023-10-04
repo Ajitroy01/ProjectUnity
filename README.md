@@ -1,1 +1,75 @@
-# ProjectHub
+# **ProjectHub**
+
+# **Efficient Project Collaboration and Task Management**
+
+## **Introduction**
+
+Welcome to the ProjectHub, a powerful tool designed to streamline project collaboration, task tracking, and resource management within teams. This README guide will provide you with an overview of the application's features, setup instructions, and key information for users and developers.
+
+## **Platform Access**
+
+Access the Project Management Application at **[https://projectmanagement-demo.com](https://projectmanagement-demo.com/)**
+
+## **Feature Walkthrough**
+
+Watch our guided video walkthrough: **[Link to Feature Walkthrough](https://youtube-link-to-walkthrough/)**
+
+## **Key Features**
+
+- User Authentication and Access Control
+- Project Management and Tracking
+- Task Creation, Assignment, and Monitoring
+- Team Creation and Management
+- Comprehensive Dashboard for Insights
+- Real-Time or Email Notifications
+- Project and Task Analytics
+
+## **Design Approach and Assumptions**
+
+- Designed for a seamless and intuitive user experience.
+- Assumes simplified authentication for demonstration purposes.
+
+## **Installation & Getting Started**
+
+1. Clone the repository: **`git clone <https://github.com/yourusername/projectmanagement.git>`**
+2. Install dependencies: **`npm install`**
+3. Start the application: **`npm start`**
+
+## **User Journey**
+
+1. Register with your unique email address and role.
+2. Log in securely to access your dashboard.
+3. Create and manage projects, tasks, and teams.
+4. Stay updated with real-time notifications.
+5. Utilize project and task analytics for informed decisions.
+
+## **API Endpoints**
+
+### **Authentication**
+
+- **`POST /api/auth/register`** - Register a new user.
+- **`POST /api/auth/login`** - Log in an existing user.
+
+### **Projects**
+
+- **`GET /api/projects`** - Retrieve all projects.
+- **`GET /api/projects/:id`** - Retrieve project details.
+- **`POST /api/projects`** - Create a new project.
+- **`PUT /api/projects/:id`** - Update a project.
+- **`DELETE /api/projects/:id`** - Delete a project.
+
+
+
+## **Technology Stack**
+
+- Front-end: Angular
+- Back-end: Java Spring Boot
+- Database: MySQL
+- Real-Time Notifications: WebSocket
+- Project and Task Analytics: Chart.js
+
+---
+
+For more detailed information on the application's features, API endpoints, and technology stack, please refer to the project's documentation and source code.
+
+Thank you for choosing the ProjectHub for your team collaboration needs!
