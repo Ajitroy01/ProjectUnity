@@ -1,0 +1,130 @@
+<div
+  class="create-team-container"
+  style="background-color: transparent; border: none"
+>
+  <h2 class="text-2xl font-bold mb-4">Create Team</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700"
+          >Team Name:</label
+        >
+        <input
+          type="text"
+          id="teamName"
+          name="teamName"
+          [(ngModel)]="teamName"
+          required
+          class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700"
+          >Select Team Members:</label
+        >
+        <select
+          id="members"
+          name="members"
+          [(ngModel)]="selectedMemberId"
+          class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+        >
+          <option [value]="member.id" *ngFor="let member of availableMembers">
+            {{ member.name }}
+          </option>
+        </select>
+        <button
+          type="button"
+          (click)="addMember()"
+          class="w-full py-2 px-4 bg-[#ffffff42] hover:border-[#035ec5] hover:border-solid hover:border-[1px] hover:text-[#035ec5] font-bold rounded-md shadow-md mt-2"
+        >
+          Add Member
+        </button>
+      </div>
+    </div>
+
+    <!-- Display selected team members -->
+    <div class="mt-4">
+      <table class="w-full border-collapse border border-gray-300">
+        <thead>
+          <tr>
+            <th class="border p-2">ID</th>
+            <th class="border p-2">Name</th>
+            <th class="border p-2">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let member of teamMembers">
+            <td class="border border-gray-300 p-2">{{ member.id }}</td>
+            <td class="border border-gray-300 p-2">{{ member.name }}</td>
+            <td class="border border-gray-300 p-2">
+              <button type="button" (click)="removeMember(member.id)">
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700"
+          >Select Projects:</label
+        >
+        <select
+          id="projects"
+          name="projects"
+          [(ngModel)]="selectedProjectId"
+          class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+        >
+          <option
+            [value]="project.id"
+            *ngFor="let project of availableProjects"
+          >
+            {{ project.name }}
+          </option>
+        </select>
+        <button
+          type="button"
+          (click)="addProject()"
+          class="w-full py-2 px-4 bg-[#ffffff42] hover:border-[#035ec5] hover:border-solid hover:border-[1px] hover:text-[#035ec5] font-bold rounded-md shadow-md mt-2"
+        >
+          Add Project
+        </button>
+      </div>
+    </div>
+
+    <!-- Display selected team projects -->
+    <div class="mt-4">
+      <table class="w-full border-collapse border border-gray-300">
+        <thead>
+          <tr>
+            <th class="border p-2">ID</th>
+            <th class="border p-2">Name</th>
+            <th class="border p-2">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let project of teamProjects">
+            <td class="border border-gray-300 p-2">{{ project.id }}</td>
+            <td class="border border-gray-300 p-2">{{ project.name }}</td>
+            <td class="border border-gray-300 p-2">
+              <button type="button" (click)="removeProject(project.id)">
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6">
+      <button
+        type="submit"
+        class="w-full py-2 px-4 bg-[#ffffff42] hover:border-[#035ec5] hover:border-solid hover:border-[1px] hover:text-[#035ec5] font-bold rounded-md shadow-md"
+      >
+        Create Team
+      </button>
+    </div>
+  </form>
+</div>

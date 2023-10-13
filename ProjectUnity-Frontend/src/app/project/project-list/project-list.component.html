@@ -1,0 +1,29 @@
+<!-- project-list.component.html -->
+<div class="project-list">
+  <h2>Project List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Project Name</th>
+        <th>Project Manager</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects">
+        <td>{{ project.id }}</td>
+        <td>{{ project.name }}</td>
+        <td>{{ project.projectManager.name }}</td>
+        <td>
+          <button
+            [routerLink]="['/project-dashboard', project.id]"
+            class="view-project-button"
+          >
+            View Project
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

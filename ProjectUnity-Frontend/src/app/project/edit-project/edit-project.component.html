@@ -1,0 +1,100 @@
+<div class="edit-project-container">
+  <h2 class="text-2xl font-bold mb-4">Edit Project</h2>
+
+  <form (ngSubmit)="updateProject()" #editProjectForm="ngForm">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700"
+          >Project ID:</label
+        >
+        <input
+          type="number"
+          id="projectId"
+          name="projectId"
+          [(ngModel)]="project.id"
+          required
+          class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700"
+          >Project Name:</label
+        >
+        <input
+          type="text"
+          id="projectName"
+          name="projectName"
+          [(ngModel)]="project.name"
+          required
+          class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+        />
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <label class="block text-sm font-medium text-gray-700"
+        >Project Description:</label
+      >
+      <textarea
+        id="projectDescription"
+        name="projectDescription"
+        [(ngModel)]="project.description"
+        required
+        class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+      ></textarea>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700"
+          >Start Date:</label
+        >
+        <input
+          type="date"
+          id="startDate"
+          name="startDate"
+          [(ngModel)]="project.startDate"
+          required
+          class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">End Date:</label>
+        <input
+          type="date"
+          id="endDate"
+          name="endDate"
+          [(ngModel)]="project.endDate"
+          required
+          class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+        />
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <label class="block text-sm font-medium text-gray-700"
+        >Project Manager ID:</label
+      >
+      <input
+        type="number"
+        id="projectManager"
+        name="projectManager"
+        [(ngModel)]="project.projectManager.id"
+        required
+        class="w-full px-4 py-2 rounded-md shadow-sm border-gray-300 focus:border-[#035ec5] focus:ring focus:ring-[#035ec5] focus:ring-opacity-50"
+      />
+    </div>
+
+    <div class="mt-6">
+      <button
+        type="submit"
+        [disabled]="editProjectForm.invalid"
+        class="w-full py-2 px-4 bg-[#ffffff42] hover:border-[#035ec5] hover:border-solid hover:border-[1px] hover:text-[#035ec5] font-bold rounded-md shadow-md"
+      >
+        Update Project
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,8 @@
+<div class="project-task-list-container">
+  <h2>Project Task List</h2>
+
+  <!-- Display a list of tasks for the selected project -->
+  <ul>
+    <li *ngFor="let task of tasks">{{ task.title }} - {{ task.status }}</li>
+  </ul>
+</div>

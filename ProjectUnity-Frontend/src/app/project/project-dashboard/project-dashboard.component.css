@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+.main {
+  background: #94bbe9;
+  color: #555555;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border: 2px solid black;
+}
+.wrapper .profile {
+  width: 550px;
+  margin-right: 25px;
+}
+.wrapper .profile .profile_img_info {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.wrapper .profile .profile_img_info .img {
+  width: 200px;
+}
+
+.wrapper .profile .profile_img_info .img img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.wrapper .profile .profile_img_info .info {
+  width: calc(100% - 125px);
+  padding: 40px;
+}
+
+.wrapper .profile .profile_img_info .info .name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.wrapper .profile .profile_img_info .place {
+  font-weight: 300;
+}
+.wrapper .profile .profile_skills {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.wrapper .profile .profile_skills .skills {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.wrapper .profile .profile_skills .skills p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.wrapper .profile .profile_skills .skills ul li {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.wrapper .profile .profile_skills .skills ul li .fab {
+  width: 40px;
+}
+.wrapper .profile .profile_skills .tags_wrap {
+  padding-top: 20px;
+}
+
+.wrapper .profile .profile_skills .tags_wrap span.tag {
+  background: #e4e9ef;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.wrapper .profile_counts {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 175px;
+}
+
+.wrapper .profile_counts .profile_counts_wrap {
+  padding: 30px 0;
+  border-bottom: 1px solid #cccccc;
+}
+.wrapper .profile_counts .profile_counts_wrap:first-child {
+  padding-top: 0;
+}
+.wrapper .profile_counts .profile_counts_wrap:last-child {
+  padding-bottom: 0px;
+  border-bottom: 0px;
+}
+
+.wrapper .profile_counts .profile_counts_wrap .item {
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.wrapper .profile_counts .profile_counts_wrap .item:hover {
+  background: #e4e9ef;
+}
+
+.wrapper .profile_counts .profile_counts_wrap .item .fas {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.wrapper .profile_counts .profile_counts_wrap .item .title {
+  font-size: 14px;
+}

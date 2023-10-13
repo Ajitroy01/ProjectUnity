@@ -1,0 +1,93 @@
+<div class="create-project-container">
+  <div class="registration-form">
+    <h2 class="text-2xl font-bold mb-4">Create Project</h2>
+    <form
+      (ngSubmit)="createProject()"
+      #createProjectForm="ngForm"
+      class="space-y-2"
+    >
+      <div class="form-group">
+        <label for="projectName" class="block text-sm font-medium text-gray-700"
+          >Project Name:</label
+        >
+        <input
+          type="text"
+          id="projectName"
+          name="projectName"
+          [(ngModel)]="project.name"
+          required
+          class="w-full p-3 rounded-lg shadow focus:ring focus:ring-[#035ec5] focus:outline-none"
+        />
+      </div>
+
+      <div class="form-group">
+        <label
+          for="projectDescription"
+          class="block text-sm font-medium text-gray-700"
+          >Project Description:</label
+        >
+        <textarea
+          id="projectDescription"
+          name="projectDescription"
+          [(ngModel)]="project.description"
+          required
+          class="w-full p-3 rounded-lg shadow focus:ring focus:ring-[#035ec5] focus:outline-none"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="startDate" class="block text-sm font-medium text-gray-700"
+          >Start Date:</label
+        >
+        <input
+          type="date"
+          id="startDate"
+          name="startDate"
+          [(ngModel)]="project.startDate"
+          required
+          class="w-full p-3 rounded-lg shadow focus:ring focus:ring-[#035ec5] focus:outline-none"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="endDate" class="block text-sm font-medium text-gray-700"
+          >End Date:</label
+        >
+        <input
+          type="date"
+          id="endDate"
+          name="endDate"
+          [(ngModel)]="project.endDate"
+          required
+          class="w-full p-3 rounded-lg shadow focus:ring focus:ring-[#035ec5] focus:outline-none"
+        />
+      </div>
+
+      <div class="form-group">
+        <label
+          for="projectManagerId"
+          class="block text-sm font-medium text-gray-700"
+          >Project Manager ID:</label
+        >
+        <input
+          type="number"
+          id="projectManagerId"
+          name="projectManagerId"
+          [(ngModel)]="project.projectManager.id"
+          required
+          class="w-full p-3 rounded-lg shadow focus:ring focus:ring-[#035ec5] focus:outline-none"
+        />
+      </div>
+
+      <div class="form-actions">
+        <button
+          type="submit"
+          [disabled]="createProjectForm.invalid"
+          class="w-full py-2 px-4 bg-[#ffffff42] hover:border-[#035ec5] hover:border-solid hover:border-[1px] hover:text-[#035ec5] font-bold rounded-md shadow-md"
+        >
+          Create Project
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

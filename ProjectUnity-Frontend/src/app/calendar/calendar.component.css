@@ -1,0 +1,113 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.cal-wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  margin: 0 auto; /* Center the wrapper div */
+  margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.cal-wrapper .cal-header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+.cal-header .icons {
+  display: flex;
+}
+
+.cal-header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+.cal-header .icons span:hover {
+  background: #f2f2f2;
+}
+
+.cal-header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.cal-wrapper .calendar {
+  padding: 20px;
+}
+
+.cal-wrapper .calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.cal-wrapper .calendar .days {
+  margin-bottom: 20px;
+}
+
+.cal-wrapper .calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+
+.cal-wrapper .calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.cal-wrapper .calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.cal-wrapper .calendar .days li.inactive {
+  color: #aaa;
+}
+
+.cal-wrapper .calendar .days li.active {
+  color: #fff;
+}
+
+.cal-wrapper .calendar .days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cal-wrapper .calendar .days li.active::before {
+  background: #9b59b6;
+}
+
+.cal-wrapper .calendar .days li:not(.active):hover::before {
+  background: #f2f2f2;
+}

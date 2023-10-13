@@ -1,0 +1,56 @@
+<div class="homepage">
+  <header class="header">
+    <a href="#" class="logo">ProjectUnity</a>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="home">
+    <div class="content">
+      <h2>Powering Success Through Teamwork</h2>
+      <p>
+        "If only every workday could be filled with the shared energy and
+        enthusiasm of teamwork, we might accomplish less individually, but we'd
+        be in high spirits and achieve more collectively."
+      </p>
+      <a href="#">Join us</a>
+    </div>
+    <div class="wrapper-login">
+      <h2>Member Login</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fas fa-envelope"></i>
+          </span>
+          <input
+            name="username"
+            type="username"
+            [(ngModel)]="loginData.username"
+            required
+          />
+          <label>Enter your username</label>
+        </div>
+        <div class="input-box">
+          <span class="icon">
+            <i class="fa-solid fas fa-lock"></i>
+          </span>
+          <input
+            name="password"
+            type="password"
+            [(ngModel)]="loginData.password"
+            required
+          />
+          <label>Enter your password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" />Remember me</label>
+          <a href="#">Forgot password</a>
+        </div>
+        <button class="btn" (click)="onSubmit()">Login</button>
+      </form>
+    </div>
+  </section>
+</div>

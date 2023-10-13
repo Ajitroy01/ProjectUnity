@@ -1,0 +1,53 @@
+<div class="main">
+  <div class="wrapper">
+    <div class="profile">
+      <div class="profile_img_info">
+        <div class="img">
+          <img
+            src="https://images.unsplash.com/photo-1509259305526-037fbbf698fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGF1c3RyYWxpYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
+            alt="profile_pic"
+          />
+        </div>
+        <div class="info">
+          <p class="name">{{ project.name }}</p>
+          <p class="place">
+            {{ project.startDate }}
+            {{ project.endDate }}
+          </p>
+        </div>
+      </div>
+      <div class="profile_skills">
+        <div class="skills">
+          <p>Description</p>
+          <h6>{{ project.description }}</h6>
+        </div>
+        <div class="tags_wrap">
+          <span class="tag">SpringBoot</span>
+          <span class="tag">Spring Security</span>
+          <span class="tag">Angular</span>
+          <span class="tag">TailwindCss</span>
+        </div>
+      </div>
+    </div>
+    <div class="profile_counts">
+      <div class="profile_counts_wrap">
+        <div class="item">
+          <div class="icon"><i class="fas fa-user"></i></div>
+          <div class="title">Admin</div>
+        </div>
+      </div>
+      <div class="profile_counts_wrap">
+        <div class="item">
+          <div class="icon"><i class="fas fa-eye"></i></div>
+          <div class="title">Manager</div>
+        </div>
+      </div>
+      <div class="profile_counts_wrap">
+        <div class="item">
+          <div class="icon"><i class="fas fa-users"></i></div>
+          <div class="title">Team</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+<div class="container">
+  <h2>Update Task</h2>
+  <form (submit)="onEditSubmit()">
+    <div class="form-group">
+      <label for="taskId">Task ID:</label>
+      <input
+        type="text"
+        id="taskId"
+        name="taskId"
+        [(ngModel)]="task.id"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        [(ngModel)]="task.title"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="task.description"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="dueDate">Due Date:</label>
+      <input
+        type="date"
+        id="dueDate"
+        name="dueDate"
+        [(ngModel)]="task.dueDate"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="priority">Priority:</label>
+      <select
+        id="priority"
+        name="priority"
+        [(ngModel)]="task.priority"
+        required
+      >
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <select id="status" name="status" [(ngModel)]="task.status" required>
+        <option value="To Do">To Do</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Done">Done</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="project">Project:</label>
+      <select
+        id="project"
+        name="project"
+        [(ngModel)]="task.project.id"
+        required
+      >
+        <option *ngFor="let project of projects" [value]="project.id">
+          {{ project.name }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="teamId">Team ID:</label>
+      <input
+        type="text"
+        id="teamId"
+        name="teamId"
+        [(ngModel)]="teamId"
+        required
+      />
+      <button type="button" (click)="fetchTeamMembers()">View Members</button>
+    </div>
+    <div class="form-group" *ngIf="showMembersSelect">
+      <label for="assignedTeamMember">Assigned Team Member:</label>
+      <select
+        id="assignedTeamMember"
+        name="assignedTeamMember"
+        [(ngModel)]="task.assignedTeamMember.id"
+        required
+      >
+        <option *ngFor="let member of teamMembers" [value]="member.id">
+          {{ member.name }}
+        </option>
+      </select>
+    </div>
+    <button type="submit">Create Task</button>
+  </form>
+
+  <!-- Delete Task Section -->
+  <div>
+    <h2>Delete Task</h2>
+    <div class="form-group">
+      <label for="taskIdToDelete">Task ID to Delete:</label>
+      <input
+        type="text"
+        id="taskIdToDelete"
+        name="taskIdToDelete"
+        [(ngModel)]="taskIdToDelete"
+        required
+      />
+      <button type="button" (click)="onDeleteTask()">Delete Task</button>
+    </div>
+  </div>
+</div>

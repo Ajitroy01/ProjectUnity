@@ -1,0 +1,184 @@
+<input type="checkbox" id="nav-toggle" />
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <h1><span class="fab fa-asymmetrik"> </span> <span>ProjectHub</span></h1>
+  </div>
+
+  <div class="sidebar-menu">
+    <ul>
+      <li>
+        <a
+          (click)="toggleComponent('dashboard')"
+          [class.active]="currentComponent === 'dashboard'"
+        >
+          <span class="fas fa-tachometer-alt"></span>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toggleComponent('team')"
+          [class.active]="currentComponent === 'team'"
+        >
+          <span class="fas fa-users"></span>
+          <span>Create Team</span>
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toggleComponent('manage-team')"
+          [class.active]="currentComponent === 'manage-team'"
+        >
+          <span class="fas fa-boxes"></span>
+          <span>Manage Team</span>
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toggleComponent('task')"
+          [class.active]="currentComponent === 'task'"
+        >
+          <span class="fas fa-shopping-cart"></span>
+          <span>Create Task</span>
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toggleComponent('manage-task')"
+          [class.active]="currentComponent === 'manage-task'"
+        >
+          <span class="fas fa-wrench"></span>
+          <span>Manage Task</span>
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="toggleComponent('manage-projects')"
+          [class.active]="currentComponent === 'manage-projects'"
+        >
+          <span class="fas fa-wrench"></span>
+          <span>Manage Projects</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content">
+  <header>
+    <h2>
+      <label for="nav-toggle">
+        <span class="fas fa-bars"></span>
+      </label>
+      {{ currentComponent }}
+    </h2>
+
+    <div class="search-wrapper">
+      <span class="fas fa-search"> </span>
+      <input type="search" placeholder="Search..." />
+    </div>
+
+    <div class="user-wrapper">
+      <img
+        src="https://bit.ly/3bvT89p"
+        width="40px"
+        height="40px"
+        alt="profile-img"
+      />
+      <div class="">
+        <h4>{{ currentUser.name }}</h4>
+        <small>Manager</small>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="main__container">
+      <div *ngIf="currentComponent === 'dashboard'" class="main__cards">
+        <div class="card">
+          <img src="assets/manager-profile.jpg" alt="Manager's Profile" />
+          <div class="card_inner">
+            <h2>{{ currentUser.name }}</h2>
+            <p>Manager</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Current Project</h2>
+          <div *ngIf="projects.length > 0">
+            <ul>
+              <li
+                *ngFor="
+                  let project of projects.slice(
+                    0,
+                    showMore ? projects.length : 1
+                  )
+                "
+              >
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                <p>Start Date: {{ project.startDate }}</p>
+                <p>End Date: {{ project.endDate }}</p>
+                <p>Team ID: {{ project.teamId }}</p>
+              </li>
+            </ul>
+            <button (click)="toggleShowMore()">
+              {{ showMore ? "Show Less" : "View More" }}
+            </button>
+          </div>
+          <div *ngIf="projects.length === 0">
+            <p>No projects available.</p>
+          </div>
+        </div>
+
+        <!-- Team Management Card -->
+        <div class="card">
+          <h2>Manage Teams</h2>
+          <!-- Add team management content here -->
+        </div>
+
+        <!-- Important Tasks Card -->
+        <div class="card">
+          <h2>Important Tasks</h2>
+          <!-- List of important tasks -->
+          <ul>
+            <li>Task 1: Task Name 1</li>
+            <li>Task 2: Task Name 2</li>
+            <!-- Add more tasks as needed -->
+          </ul>
+        </div>
+      </div>
+
+      <div *ngIf="currentComponent === 'team'" class="main__cards">
+        <app-create-team></app-create-team>
+      </div>
+
+      <div
+        *ngIf="currentComponent === 'manage-team'"
+        class="main__cards manage-team"
+      >
+        <app-edit-team></app-edit-team>
+      </div>
+      <div *ngIf="currentComponent === 'task'" class="main__cards">
+        <app-create-task></app-create-task>
+      </div>
+
+      <div *ngIf="currentComponent === 'manage-task'" class="main__cards">
+        <app-edit-task></app-edit-task>
+      </div>
+      <div *ngIf="currentComponent === 'manage-projects'" class="main__cards">
+        <div *ngFor="let project of projects" class="project-card">
+          <div class="project-details">
+            <p><strong>Project ID:</strong> {{ project.id }}</p>
+            <p><strong>Project Name:</strong> {{ project.name }}</p>
+            <p><strong>Project End Date:</strong> {{ project.endDate }}</p>
+          </div>
+          <button [routerLink]="'/project-dashboard/' + project.id">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <div class="charts"></div>
+    </div>
+  </main>
+</div>

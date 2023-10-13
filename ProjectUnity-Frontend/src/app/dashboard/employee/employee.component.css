@@ -1,0 +1,62 @@
+.column-names {
+  padding: 10px;
+}
+.column-names h4 {
+  margin-right: 20px;
+  margin-left: 50px;
+}
+
+.user-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+  font-weight: 600;
+  color: var(--text-grey);
+  margin-left: -80px;
+}
+
+.user-details small:not(:last-child) {
+  margin-right: 50px;
+}
+
+.employee-managers {
+  width: 70%;
+  margin: auto;
+}
+
+.teams-card {
+  width: 80%;
+  margin: auto;
+}
+
+.projects-card {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.project-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  min-height: 260px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-details {
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  margin: 5px 0;
+}
+.project-card .button2 {
+  margin-top: 20px;
+}

@@ -1,0 +1,9 @@
+<div class="team-dashboard-container">
+  <h2>Team Dashboard</h2>
+  <!-- Display a list of teams here -->
+  <ul>
+    <li *ngFor="let team of teams">
+      <a [routerLink]="['/teams', team.id]">{{ team.name }}</a>
+    </li>
+  </ul>
+</div>

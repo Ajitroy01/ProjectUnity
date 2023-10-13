@@ -1,0 +1,9 @@
+<div class="project-dashboard-container">
+  <h2>Project Dashboard</h2>
+  <!-- Display a list of projects here -->
+  <ul>
+    <li *ngFor="let project of projects">
+      <a [routerLink]="['/projects', project.id]">{{ project.name }}</a>
+    </li>
+  </ul>
+</div>

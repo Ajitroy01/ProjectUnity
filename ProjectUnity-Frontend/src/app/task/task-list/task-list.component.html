@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Task List</h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Task Title</div>
+      <div class="col col-2">Due Date</div>
+      <div class="col col-3">Priority</div>
+      <div class="col col-4">Status</div>
+      <div class="col col-5">Mark as Completed</div>
+      <div class="col col-6">Remove</div>
+      <div class="col col-7">Action</div>
+    </li>
+    <li class="table-row" *ngFor="let task of tasks">
+      <div class="col col-1" data-label="Task Title">{{ task.title }}</div>
+      <div class="col col-2" data-label="Due Date">
+        {{ task.dueDate | date : "yyyy-MM-dd" }}
+      </div>
+      <div class="col col-3" data-label="Priority">{{ task.priority }}</div>
+      <div class="col col-4" data-label="Status">{{ task.status }}</div>
+      <div class="col col-5" data-label="Mark as Completed">
+        <input
+          type="checkbox"
+          [(ngModel)]="task.completed"
+          (change)="onMarkAsCompleted(task)"
+        />
+      </div>
+      <div class="col col-6" data-label="Remove">
+        <button (click)="onRemoveTask(task)">Remove</button>
+      </div>
+      <div class="col col-7" data-label="Action">
+        <button [routerLink]="'/task-details/' + task.id">View More</button>
+      </div>
+    </li>
+  </ul>
+</div>

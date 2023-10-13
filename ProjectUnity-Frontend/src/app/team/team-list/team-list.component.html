@@ -1,0 +1,11 @@
+<div *ngIf="teams && teams.length > 0" class="team-list">
+  <div *ngFor="let team of teams" class="team-card">
+    <div class="team-cont">
+      <h3>Team Name: {{ team.teamName }}</h3>
+      <p>Project Name: {{ team.projects.name }}</p>
+    </div>
+    <button class="button2" [routerLink]="'/team-details/' + team.id">
+      View Details
+    </button>
+  </div>
+</div>
