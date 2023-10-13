@@ -1,10 +1,10 @@
-# **ProjectHub**
+# **ProjectUnity**
 
 # **Efficient Project Collaboration and Task Management**
 
 ## **Introduction**
 
-Welcome to the ProjectHub, a powerful tool designed to streamline project collaboration, task tracking, and resource management within teams. This README guide will provide you with an overview of the application's features, setup instructions, and key information for users and developers.
+Welcome to the ProjectUnity, a powerful tool designed to streamline project collaboration, task tracking, and resource management within teams. This README guide will provide you with an overview of the application's features, setup instructions, and key information for users and developers.
 
 ## **Platform Access**
 
