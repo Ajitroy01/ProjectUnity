@@ -60,9 +60,11 @@ Watch our guided video walkthrough: **[Link to Feature Walkthrough](https://yout
 
 ### Projects Images
 
-1. ![Project 1](https://drive.google.com/file/d/1Uc958X-z3Lx2ItO34p3qRmB3_d5hii-u/view?usp=sharing)
-2. ![Project 2](https://drive.google.com/file/d/1yXDsm2rSu7rieFDj3MjFKJ9tWIN6A5Fp/view?usp=sharing)
-3. ![Project 3](https://drive.google.com/file/d/1GPNseGo5jS7H6LhfI_OQXxWiMmIfn6y9/view?usp=sharing)
+1. <img src="https://drive.google.com/file/d/1Uc958X-z3Lx2ItO34p3qRmB3_d5hii-u/view?usp=sharing" alt="Project 1" width="400">
+
+2. <img src="https://drive.google.com/file/d/1yXDsm2rSu7rieFDj3MjFKJ9tWIN6A5Fp/view?usp=sharing" alt="Project 2" width="400">
+
+3. <img src="https://drive.google.com/file/d/1GPNseGo5jS7H6LhfI_OQXxWiMmIfn6y9/view?usp=sharing" alt="Project 3" width="400">
 
 ## **Technology Stack**
 
