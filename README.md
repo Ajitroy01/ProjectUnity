@@ -8,7 +8,9 @@ Welcome to the ProjectUnity, a powerful tool designed to streamline project coll
 
 ## **Platform Access**
 
-Access the Project Management Application at **[https://projectmanagement-demo.com](https://projectmanagement-demo.com/)**
+Access the Project Management Application by using dummy admin data :
+Username : Ajit
+Password : 1234
 
 ## **Feature Walkthrough**
 
