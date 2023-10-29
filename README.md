@@ -4,7 +4,17 @@
 
 ## **Introduction**
 
-Welcome to the ProjectUnity, a powerful tool designed to streamline project collaboration, task tracking, and resource management within teams. This README guide will provide you with an overview of the application's features, setup instructions, and key information for users and developers.
+Welcome to Project Unity, a powerful project management system designed to bring harmony and efficiency to your organization's project workflow. 
+
+In today's fast-paced business landscape, effective project management is the linchpin of success. Project Unity leverages a role-based approach to simplify the complexities of managing projects, teams, and tasks, ultimately fostering collaboration and unity within your organization.
+
+**Why Project Unity?**
+
+Traditional project management often leads to inefficiencies, miscommunication, and role ambiguities. Project Unity steps in to address these challenges, offering a user-friendly and intuitive solution. With our Spring Boot backend and Angular frontend, we provide a comprehensive set of tools for administrators, managers, and employees to streamline their project activities.
+
+- **Admins** have the power to create accounts, projects, and assign them to managers.
+- **Managers** can effortlessly oversee teams, allocate tasks, and ensure that projects are on track.
+- **Employees** find their roles and tasks well-defined, ensuring they can contribute effectively to project success.
 
 ## **Platform Access**
 
@@ -16,49 +26,22 @@ Password : 1234**
 
 Watch our guided video walkthrough: **[Link to Feature Walkthrough](https://youtube-link-to-walkthrough/)**
 
-## **Key Features**
+## Key Features
 
-- User Authentication and Access Control
-- Project Management and Tracking
-- Task Creation, Assignment, and Monitoring
-- Team Creation and Management
-- Comprehensive Dashboard for Insights
-- Real-Time or Email Notifications
-- Project and Task Analytics
+- **Role-Based Access**: Clear roles ensure everyone knows their responsibilities.
+- **Efficient Project Creation**: Admins can quickly initiate projects and assign them to the right managers.
+- **Streamlined Team Management**: Managers can create and oversee teams, simplifying task allocation.
+- **Task Assignment and Tracking**: Employees can easily track their assignments.
+- **Real-Time Communication**: Keep your team informed with real-time communication tools.
 
-## **Design Approach and Assumptions**
-
-- Designed for a seamless and intuitive user experience.
-- Assumes simplified authentication for demonstration purposes.
 
 ## **Installation & Getting Started**
 
 1. Clone the repository: **`git clone <https://github.com/yourusername/projectmanagement.git>`**
 2. Install dependencies: **`npm install`**
-3. Start the application: **`npm start`**
+3. Start the application: **`ng serve`**
 
-## **User Journey**
 
-1. Register with your unique email address and role.
-2. Log in securely to access your dashboard.
-3. Create and manage projects, tasks, and teams.
-4. Stay updated with real-time notifications.
-5. Utilize project and task analytics for informed decisions.
-
-## **API Endpoints**
-
-### **Authentication**
-
-- **`POST /api/auth/register`** - Register a new user.
-- **`POST /api/auth/login`** - Log in an existing user.
-
-### **Projects**
-
-- **`GET /api/projects`** - Retrieve all projects.
-- **`GET /api/projects/:id`** - Retrieve project details.
-- **`POST /api/projects`** - Create a new project.
-- **`PUT /api/projects/:id`** - Update a project.
-- **`DELETE /api/projects/:id`** - Delete a project.
 
 ### Projects Images
  <img src="https://drive.google.com/file/d/1Uc958X-z3Lx2ItO34p3qRmB3_d5hii-u/view?usp=drive_link" alt="Project 1" width="400">
@@ -77,4 +60,4 @@ Watch our guided video walkthrough: **[Link to Feature Walkthrough](https://yout
 
 For more detailed information on the application's features, API endpoints, and technology stack, please refer to the project's documentation and source code.
 
-Thank you for choosing the ProjectHub for your team collaboration needs!
+Thank you for choosing the ProjectUnity for your project management!
