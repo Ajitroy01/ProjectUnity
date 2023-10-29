@@ -44,9 +44,18 @@ Watch our guided video walkthrough: **[Link to Feature Walkthrough](https://yout
 
 
 ### Projects Images
- <img src="https://drive.google.com/uc?id=1Uc958X-z3Lx2ItO34p3qRmB3_d5hii-u" alt="Project 1">
- <img src="https://drive.google.com/uc?id=1yXDsm2rSu7rieFDj3MjFKJ9tWIN6A5Fp" alt="Project 2">
- <img src="https://drive.google.com/uc?id=1GPNseGo5jS7H6LhfI_OQXxWiMmIfn6y9" alt="Project 3">
+**Homepage**
+
+   ![Homepage](https://drive.google.com/uc?id=1OJS3z0Xs2tS9zF3mis2QWvqAJsfDtqI4)
+
+ **Dashboard**
+ 
+   ![Dashboard](https://drive.google.com/uc?id=1-bISliqf-f0ZSxiKlvZFznt0y1UAcFIG)
+
+**Project Details**
+
+   ![Project Details](https://drive.google.com/uc?id=1NN4okqSUtgzg95PUPac0L1D8TgIpzSbS)
+
 
 ## **Technology Stack**
 
