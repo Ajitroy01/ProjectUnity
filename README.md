@@ -44,9 +44,9 @@ Watch our guided video walkthrough: **[Link to Feature Walkthrough](https://yout
 
 
 ### Projects Images
- <img src="https://drive.google.com/file/d/1Uc958X-z3Lx2ItO34p3qRmB3_d5hii-u/view?usp=drive_link" alt="Project 1" width="400">
- <img src="https://drive.google.com/file/d/1yXDsm2rSu7rieFDj3MjFKJ9tWIN6A5Fp/view?usp=drive_link" alt="Project 2" width="400">
- <img src="https://drive.google.com/file/d/1GPNseGo5jS7H6LhfI_OQXxWiMmIfn6y9/view?usp=drive_link" alt="Project 3" width="400">
+ <img src="https://drive.google.com/uc?id=1Uc958X-z3Lx2ItO34p3qRmB3_d5hii-u" alt="Project 1">
+ <img src="https://drive.google.com/uc?id=1yXDsm2rSu7rieFDj3MjFKJ9tWIN6A5Fp" alt="Project 2">
+ <img src="https://drive.google.com/uc?id=1GPNseGo5jS7H6LhfI_OQXxWiMmIfn6y9" alt="Project 3">
 
 ## **Technology Stack**
 
